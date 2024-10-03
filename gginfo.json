@@ -3,12 +3,9 @@
 	"type": "panorama",
 	"external": {
 		"js": [
-			"3rdparty/leaflet/leaflet.js",
 			"webxr/webxr-polyfill.min.js"
 		],
-		"css": [
-			"3rdparty/leaflet/leaflet.css"
-		]
+		"css": []
 	},
 	"skin": {
 		"js": "skin.js"
@@ -19,7 +16,7 @@
 	"player": {
 		"js": "pano2vr_player.js"
 	},
-	"creationdate": "2024-10-03T02:02:19.797Z",
+	"creationdate": "2024-10-03T02:30:42.093Z",
 	"configuration": "pano.xml",
 	"preview": {
 		"img": "preview.jpg",
