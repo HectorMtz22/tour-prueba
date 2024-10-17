@@ -3,6 +3,8 @@
 	"type": "panorama",
 	"external": {
 		"js": [
+			"https://www.youtube.com/iframe_api",
+			"https://player.vimeo.com/api/player.js",
 			"webxr/webxr-polyfill.min.js"
 		],
 		"css": []
@@ -16,7 +18,7 @@
 	"player": {
 		"js": "pano2vr_player.js"
 	},
-	"creationdate": "2024-10-03T02:30:42.093Z",
+	"creationdate": "2024-10-17T00:47:37.866Z",
 	"configuration": "pano.xml",
 	"preview": {
 		"img": "preview.jpg",
