@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
-// Pano2VR 7.1.4/20938
+// Pano2VR 7.1.5/20954
 // Filename: feather_vr.ggsk
-// Generated 2024-10-16T18:47:37
+// Generated 2024-10-31T18:40:23
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('node_cloner_vr_hasUp', 2, false, { ignoreInState: 0  });
@@ -124,6 +124,9 @@ function pano2vrVrSkin(player,base) {
 		vrPos.y += el.userData.curScaleOffY;
 		return vrPos;
 	}
+	this.skin_nodechangeCallback = function() {
+		me.ggUserdata=player.userdata;
+	};
 	this.addSkin=function() {
 		if (me.vrSkinAdded) return;
 		me.vrSkinAdded = true;
@@ -400,13 +403,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'page_up_bg_geometry';
 		geometry.computeBoundingBox();
@@ -704,13 +707,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'page_down_bg_geometry';
 		geometry.computeBoundingBox();
@@ -1075,13 +1078,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'exit_vr_geometry';
 		geometry.computeBoundingBox();
@@ -1360,13 +1363,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'close_skin_geometry';
 		geometry.computeBoundingBox();
@@ -1707,13 +1710,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'open_skin_geometry';
 		geometry.computeBoundingBox();
@@ -2070,6 +2073,7 @@ function pano2vrVrSkin(player,base) {
 					hotspotTemplates['ht_video_url'][i].ggEvent_changenode();
 				}
 			}
+			me.skin_nodechangeCallback();
 			me._page_up_bg.logicBlock_visible();
 			me._page_down_bg.logicBlock_visible();
 		};
@@ -2180,13 +2184,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.2, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.2, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.2);
+		roundedRectShape.arc(0, -0.2, 0.2, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+		roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+		roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.2);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.2, (height / 2.0));
+		roundedRectShape.arc(0.2, 0, 0.2, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'node_image_geometry';
 		geometry.computeBoundingBox();
@@ -2384,9 +2388,9 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape.moveTo((-width / 2.0) + 0, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+		roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+		roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'node_title_geometry';
@@ -2573,7 +2577,10 @@ function pano2vrVrSkin(player,base) {
 			me._node_title.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._node_title.remove(...me._node_title.children);
+			for (let i = 0; i < me._node_title.children.length; i++) {
+				let child = me._node_title.children[i];
+				if (child.name.includes('scrollbar')) me._node_title.remove(child);
+			}
 			var canv = me._node_title.userData.textCanvas;
 			var ctx = me._node_title.userData.textCanvasContext;
 			ctx.font = '32px Verdana';
@@ -2801,13 +2808,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_video_url_bg_geometry';
 		geometry.computeBoundingBox();
@@ -3348,7 +3355,10 @@ function pano2vrVrSkin(player,base) {
 			me._ht_video_url_title.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._ht_video_url_title.remove(...me._ht_video_url_title.children);
+			for (let i = 0; i < me._ht_video_url_title.children.length; i++) {
+				let child = me._ht_video_url_title.children[i];
+				if (child.name.includes('scrollbar')) me._ht_video_url_title.remove(child);
+			}
 			var canv = me._ht_video_url_title.userData.textCanvas;
 			var ctx = me._ht_video_url_title.userData.textCanvasContext;
 			ctx.font = '36px Verdana';
@@ -3469,13 +3479,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.3, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.3, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.3);
+		roundedRectShape.arc(0, -0.3, 0.3, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.3);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.3, (-height / 2.0));
+		roundedRectShape.arc(-0.3, 0, 0.3, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.3, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.3);
+		roundedRectShape.arc(0, 0.3, 0.3, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.3);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.3, (height / 2.0));
+		roundedRectShape.arc(0.3, 0, 0.3, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_video_url_popup_bg_geometry';
 		geometry.computeBoundingBox();
@@ -4250,13 +4260,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_video_file_bg_geometry';
 		geometry.computeBoundingBox();
@@ -4797,7 +4807,10 @@ function pano2vrVrSkin(player,base) {
 			me._ht_video_file_title.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._ht_video_file_title.remove(...me._ht_video_file_title.children);
+			for (let i = 0; i < me._ht_video_file_title.children.length; i++) {
+				let child = me._ht_video_file_title.children[i];
+				if (child.name.includes('scrollbar')) me._ht_video_file_title.remove(child);
+			}
 			var canv = me._ht_video_file_title.userData.textCanvas;
 			var ctx = me._ht_video_file_title.userData.textCanvasContext;
 			ctx.font = '36px Verdana';
@@ -4918,13 +4931,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.3, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.3, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.3);
+		roundedRectShape.arc(0, -0.3, 0.3, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.3);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.3, (-height / 2.0));
+		roundedRectShape.arc(-0.3, 0, 0.3, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.3, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.3);
+		roundedRectShape.arc(0, 0.3, 0.3, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.3);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.3, (height / 2.0));
+		roundedRectShape.arc(0.3, 0, 0.3, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_video_file_popup_bg_geometry';
 		geometry.computeBoundingBox();
@@ -5702,13 +5715,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_info_bg_geometry';
 		geometry.computeBoundingBox();
@@ -6251,7 +6264,10 @@ function pano2vrVrSkin(player,base) {
 			me._ht_info_title.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._ht_info_title.remove(...me._ht_info_title.children);
+			for (let i = 0; i < me._ht_info_title.children.length; i++) {
+				let child = me._ht_info_title.children[i];
+				if (child.name.includes('scrollbar')) me._ht_info_title.remove(child);
+			}
 			var canv = me._ht_info_title.userData.textCanvas;
 			var ctx = me._ht_info_title.userData.textCanvasContext;
 			ctx.font = '36px Verdana';
@@ -6372,13 +6388,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.3, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.3, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.3);
+		roundedRectShape.arc(0, -0.3, 0.3, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.3);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.3, (-height / 2.0));
+		roundedRectShape.arc(-0.3, 0, 0.3, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.3, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.3);
+		roundedRectShape.arc(0, 0.3, 0.3, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.3);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.3, (height / 2.0));
+		roundedRectShape.arc(0.3, 0, 0.3, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_info_popup_bg_geometry';
 		geometry.computeBoundingBox();
@@ -6798,7 +6814,10 @@ function pano2vrVrSkin(player,base) {
 			me._ht_info_popup.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._ht_info_popup.remove(...me._ht_info_popup.children);
+			for (let i = 0; i < me._ht_info_popup.children.length; i++) {
+				let child = me._ht_info_popup.children[i];
+				if (child.name.includes('scrollbar')) me._ht_info_popup.remove(child);
+			}
 			var canv = me._ht_info_popup.userData.textCanvas;
 			var ctx = me._ht_info_popup.userData.textCanvasContext;
 			ctx.font = '44px Verdana';
@@ -7300,13 +7319,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_image_bg_geometry';
 		geometry.computeBoundingBox();
@@ -7848,7 +7867,10 @@ function pano2vrVrSkin(player,base) {
 			me._ht_image_title.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._ht_image_title.remove(...me._ht_image_title.children);
+			for (let i = 0; i < me._ht_image_title.children.length; i++) {
+				let child = me._ht_image_title.children[i];
+				if (child.name.includes('scrollbar')) me._ht_image_title.remove(child);
+			}
 			var canv = me._ht_image_title.userData.textCanvas;
 			var ctx = me._ht_image_title.userData.textCanvasContext;
 			ctx.font = '36px Verdana';
@@ -7969,13 +7991,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.3, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.3, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.3);
+		roundedRectShape.arc(0, -0.3, 0.3, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.3);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.3, (-height / 2.0));
+		roundedRectShape.arc(-0.3, 0, 0.3, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.3, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.3);
+		roundedRectShape.arc(0, 0.3, 0.3, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.3);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.3, (height / 2.0));
+		roundedRectShape.arc(0.3, 0, 0.3, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_image_popup_bg_geometry';
 		geometry.computeBoundingBox();
@@ -8299,13 +8321,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.2, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.2, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.2);
+		roundedRectShape.arc(0, -0.2, 0.2, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+		roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+		roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.2);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.2, (height / 2.0));
+		roundedRectShape.arc(0.2, 0, 0.2, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_image_popup_geometry';
 		geometry.computeBoundingBox();
@@ -8367,13 +8389,13 @@ function pano2vrVrSkin(player,base) {
 			roundedRectShape = new THREE.Shape();
 			roundedRectShape.moveTo((-width / 2.0) + 0.2, (height / 2.0));
 			roundedRectShape.lineTo((width / 2.0) - 0.2, (height / 2.0));
-			roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.2);
+			roundedRectShape.arc(0, -0.2, 0.2, Math.PI / 2.0, 2.0 * Math.PI, true);
 			roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-			roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+			roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 			roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-			roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+			roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 			roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.2);
-			roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.2, (height / 2.0));
+			roundedRectShape.arc(0.2, 0, 0.2, Math.PI, Math.PI / 2.0, true);
 			geometry = new THREE.ShapeGeometry(roundedRectShape);
 			geometry.name = 'ht_image_popup_geometry';
 			geometry.computeBoundingBox();
@@ -8399,13 +8421,13 @@ function pano2vrVrSkin(player,base) {
 			roundedRectShape = new THREE.Shape();
 			roundedRectShape.moveTo((-width / 2.0) + 0.2, (height / 2.0));
 			roundedRectShape.lineTo((width / 2.0) - 0.2, (height / 2.0));
-			roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.2);
+			roundedRectShape.arc(0, -0.2, 0.2, Math.PI / 2.0, 2.0 * Math.PI, true);
 			roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-			roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+			roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 			roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-			roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+			roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 			roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.2);
-			roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.2, (height / 2.0));
+			roundedRectShape.arc(0.2, 0, 0.2, Math.PI, Math.PI / 2.0, true);
 			geometry = new THREE.ShapeGeometry(roundedRectShape);
 			geometry.name = 'ht_image_popup_geometry';
 			geometry.computeBoundingBox();
@@ -8812,13 +8834,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.12, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.12, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.12);
+		roundedRectShape.arc(0, -0.12, 0.12, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.12);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.12, (-height / 2.0));
+		roundedRectShape.arc(-0.12, 0, 0.12, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.12, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.12);
+		roundedRectShape.arc(0, 0.12, 0.12, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.12);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.12, (height / 2.0));
+		roundedRectShape.arc(0.12, 0, 0.12, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_node_bg_geometry';
 		geometry.computeBoundingBox();
@@ -9038,13 +9060,13 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape = new THREE.Shape();
 		roundedRectShape.moveTo((-width / 2.0) + 0.2, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0.2, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.2);
+		roundedRectShape.arc(0, -0.2, 0.2, Math.PI / 2.0, 2.0 * Math.PI, true);
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+		roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+		roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.2);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.2, (height / 2.0));
+		roundedRectShape.arc(0.2, 0, 0.2, Math.PI, Math.PI / 2.0, true);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_node_image_geometry';
 		geometry.computeBoundingBox();
@@ -9299,9 +9321,9 @@ function pano2vrVrSkin(player,base) {
 		roundedRectShape.moveTo((-width / 2.0) + 0, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0) - 0, (height / 2.0));
 		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.2);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.2, (-height / 2.0));
+		roundedRectShape.arc(-0.2, 0, 0.2, 2.0 * Math.PI, 3.0 * Math.PI / 2.0, true);
 		roundedRectShape.lineTo((-width / 2.0) + 0.2, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.2);
+		roundedRectShape.arc(0, 0.2, 0.2, 3.0 * Math.PI / 2.0, Math.PI, true);
 		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0);
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'ht_node_title_geometry';
@@ -9488,7 +9510,10 @@ function pano2vrVrSkin(player,base) {
 			me._ht_node_title.material.map = textTexture;
 		}
 		el.userData.ggRenderText = function() {
-			me._ht_node_title.remove(...me._ht_node_title.children);
+			for (let i = 0; i < me._ht_node_title.children.length; i++) {
+				let child = me._ht_node_title.children[i];
+				if (child.name.includes('scrollbar')) me._ht_node_title.remove(child);
+			}
 			var canv = me._ht_node_title.userData.textCanvas;
 			var ctx = me._ht_node_title.userData.textCanvasContext;
 			ctx.font = '40px Verdana';
@@ -9778,15 +9803,12 @@ function pano2vrVrSkin(player,base) {
 	me.removeSkinHotspots=function() {
 		hotspotTemplates = [];
 	}
-	player.addListener('changenode', function() {
-		me.ggUserdata=player.userdata;
-	});
 	me.skinTimerEvent=function() {
 		if (!player.isInVR()) return;
 		me.ggCurrentTime=new Date().getTime();
 	};
 	player.addListener('timer', me.skinTimerEvent);
-	player.addListener('entervr', function() { me.addSkin();if (me.eventconfigloadedCallback) me.eventconfigloadedCallback();if (me.eventchangenodeCallback) me.eventchangenodeCallback();});
+	player.addListener('vrconfigloaded', function() { me.addSkin();if (me.eventconfigloadedCallback) me.eventconfigloadedCallback();if (me.eventchangenodeCallback) me.eventchangenodeCallback();});
 	player.addListener('exitvr', function() { me.removeSkin(); });
 	me.skinTimerEvent();
 };
